@@ -2,7 +2,7 @@
   "name": "kpop",
   "version": "0.0.0",
   "dependencies": {
-    "express": "0.0.5",
+    "expres": "0.0.5",
     "gzippo": "~0.2.0"
   },
   "devDependencies": {
