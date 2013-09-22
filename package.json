@@ -2,7 +2,7 @@
   "name": "kpop",
   "version": "0.0.0",
   "dependencies": {
-    "expres": "0.0.5",
+    "express": "0.0.5",
     "gzippo": "~0.2.0"
   },
   "devDependencies": {
@@ -45,7 +45,8 @@
   },
   "engines": {
     "node": ">=0.8.0",
-    "npm": ">=1.3.9"
+    "npm": ">=1.3.9",
+    "express": ">=3.4.0"
   },
   "scripts": {
     "test": "grunt test"
