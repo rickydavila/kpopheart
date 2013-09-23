@@ -154,3 +154,21 @@ ul.grid li img{
     border:none;
 }
 
+
+/*-------------------------
+    Animation
+--------------------------*/
+
+.animate-enter {
+    -webkit-transition: 1s linear all; /* Chrome */
+    -moz-transition: 1s linear all; /* Firefox */
+    -ms-transition: 1s linear all; /* IE10 */
+    -o-transition: 1s linear all; /* Opera */
+    transition: 1s linear all;
+    opacity: 0;
+}
+
+ 
+.animate-enter.animate-enter-active {
+    opacity: 1;
+}
