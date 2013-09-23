@@ -1,7 +1,7 @@
 'use strict';
 
 var app = angular.module('kpopApp', ['ngResource']);
-app.config(function ($routeProvider) {
+/*app.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'views/main.html',
@@ -10,7 +10,7 @@ app.config(function ($routeProvider) {
     .otherwise({
       redirectTo: '/'
     });
-});
+});*/
 
 // Create and register the new "instagram" service
 app.factory('instagram', function($resource){
