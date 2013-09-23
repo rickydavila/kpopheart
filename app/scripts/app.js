@@ -5,7 +5,7 @@ angular.module('kpopApp', [])
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'SwitchableGridController'
       })
       .otherwise({
         redirectTo: '/'
