@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('kpopApp', ['ngResource']);
+var app = angular.module('kpopApp', ['ngResource', 'ngAnimate']);
 /*app.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
