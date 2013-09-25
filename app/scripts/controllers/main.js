@@ -1,5 +1,3 @@
-// Define a new module. This time we declare a dependency on
-// the ngResource module, so we can work with the Instagram API
 'use strict';
 function SwitchableGridController($scope, instagram){
 
@@ -16,5 +14,6 @@ function SwitchableGridController($scope, instagram){
 		// Assigning the pics array will cause the view
 		// to be automatically redrawn by Angular.
 		$scope.pics = data;
+		console.log('Fetched some data bro');
 	});
 }
