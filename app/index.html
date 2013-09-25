@@ -12,7 +12,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css(.tmp) styles/main.css -->
-        <!--<link rel="stylesheet" href="styles/bootstrap.css">-->
+        <link rel="stylesheet" href="styles/bootstrap.css">
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/animate.css">
         <link href='http://fonts.googleapis.com/css?family=Raleway:700,300' rel='stylesheet' type='text/css'>
@@ -30,33 +30,38 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <h1 class="animated pulse">kpop <i class="icon-heart heart"></i> heart</h1>
-    <h2>most popular kpop pics on the web</h2>
-    <div class="bar">
+    <div class="container">
+    <div class="row">
+          <h1 class="animated pulse">kpop <i class="icon-heart heart"></i> heart</h1>
+          <h2>most popular kpop pics on the web</h2>
+          <div class="bar">
 
-      <!-- These two buttons switch the layout varaible,
-         which causes the correct UL to be shown. -->
+            <!-- These two buttons switch the layout varaible,
+               which causes the correct UL to be shown. -->
 
-      <a href="#" class="grid-icon" ng-class="{active: layout == 'grid'}" ng-click="layout = 'grid'"></a>
-      <a href="#" class="list-icon" ng-class="{active: layout == 'list'}" ng-click="layout = 'list'"></a>
-    </div>
+            <a href="#" class="grid-icon" ng-class="{active: layout == 'grid'}" ng-click="layout = 'grid'"></a>
+            <a href="#" class="list-icon" ng-class="{active: layout == 'list'}" ng-click="layout = 'list'"></a>
+          </div>
 
-    <!-- We have two layouts. We choose which one to show depending on the "layout" binding -->
+          <!-- We have two layouts. We choose which one to show depending on the "layout" binding -->
 
-    <ul ng-show="layout == 'grid'" class="grid">
-      <!-- A view with big photos and no text -->
-      <li ng-repeat="p in pics" class="animated fadeIn">
-        <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.low_resolution.url}}" class="fade"/></a>
-      </li>
-    </ul>
+          <ul ng-show="layout == 'grid'" class="grid">
+            <!-- A view with big photos and no text -->
+            <li ng-repeat="p in pics" class="animated fadeIn">
+              <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.low_resolution.url}}" class="fade"/></a>
+            </li>
+          </ul>
 
-    <ul ng-show="layout == 'list'" class="list">
-      <!-- A compact view smaller photos and titles -->
-      <li ng-repeat="p in pics" class="fader-animation">
-        <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.thumbnail.url}}" class="fade"/></a>
-        <p>{{p.caption.text}}</p>
-      </li>
-    </ul>
+          <ul ng-show="layout == 'list'" class="list">
+            <!-- A compact view smaller photos and titles -->
+            <li ng-repeat="p in pics" class="fader-animation">
+              <a href="{{p.link}}" target="_blank"><img ng-src="{{p.images.thumbnail.url}}" class="fade"/></a>
+              <p>{{p.caption.text}}</p>
+            </li>
+          </ul>
+      </div><!--row-->
+      </div><!--.container-->
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
