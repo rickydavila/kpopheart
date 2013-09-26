@@ -15,5 +15,16 @@ function SwitchableGridController($scope, instagram){
 		// to be automatically redrawn by Angular.
 		$scope.pics = data;
 		console.log('Fetched some data bro');
+		var x = Math.floor($scope.pics.length / 3);
+		console.log(x);
 	});
+	$scope.getFirstThird = function() {
+		return (Math.floor($scope.pics.length / 3));
+	};
+	$scope.getSecondThird = function() {
+		return (Math.floor($scope.pics.length / 3) * 2);
+	};
+	$scope.getSizeofArray = function() {
+		return (Math.floor($scope.pics.length / 3) * 2);
+	};
 }
