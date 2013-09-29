@@ -190,7 +190,7 @@ ul.grid{
     /*width: 1100px;*/
     margin: 0 auto;
     /*text-align: left;*/
-    padding: 30px;
+    padding: 20px;
 }
 
 ul.grid li{
@@ -198,10 +198,15 @@ ul.grid li{
     /*float:left;*/
 }
 
-ul.grid img{
+.grid img{
     width:290px;
     height:280px;
     display:block;
     border:none;
+}
+
+.span4.is-padded {
+    width:290px;
+    padding: 30px;
 }
 

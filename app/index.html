@@ -35,25 +35,19 @@
             <h1 class="animated pulse">kpop <i class="icon-heart heart"></i> heart</h1>
             <h2>most popular kpop pics on the web</h2>
     <div ng-repeat="p in items">
-        <div class="row">
+        <div class="row" style="float: none; margin: 0 auto;">
       <!-- We have two layouts. We choose which one to show depending on the "layout" binding -->
-            <div class="span4">
-                <ul class"grid">
+            <div class="span4 is-padded">
                   <a href="{{p.i1.link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{p.i1.images.low_resolution.url}}" class="fade"/></a>
-                </ul>
             </div>
-            <div class="span4">
-                <ul class"grid">
+             <div class="span4 is-padded">
                   <a href="{{p.i2.link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{p.i2.images.low_resolution.url}}" class="fade"/></a>
-                </ul>
             </div>
-            <div class="span4">
-                <ul class"grid">
+            <div class="span4 is-padded">
                   <a href="{{p.i3.link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{p.i3.images.low_resolution.url}}" class="fade"/></a>
-                </ul>
             </div>
         </div> <!--row-->
-    </div>
+    </div><!--ng-repeat-->
     </div><!--.container-->
 
 

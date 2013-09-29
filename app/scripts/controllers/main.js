@@ -28,6 +28,5 @@ function SwitchableGridController($scope, instagram){
 		};
 		$scope.items = objects;
 	});
-  	
 	/*console.log($scope.items); */
 }
