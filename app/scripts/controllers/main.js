@@ -5,33 +5,29 @@ function SwitchableGridController($scope, instagram){
 	// changes this value.
 	//'use strict';
 	$scope.layout = 'grid';
-
-	var pics = [];
+	$scope.items = [];
+	$scope.pics = [];
 
 	// Use the instagram service and fetch a list of the popular pics
 	instagram.fetchPopular(function(data){
 
 		// Assigning the pics array will cause the view
 		// to be automatically redrawn by Angular.
-		pics = data;
-		console.log('Fetched some data bro');
+		$scope.pics = data;
+		var objects = [];
+	  	var index = 0;
+	 	var x = Math.ceil(($scope.pics).length / 3);
+	 	console.log('this is x: ' + x);
+		for (var i = 0; i < x; i++) {
+		   index = i * 3;
+		   var obj = {i1: ($scope.pics)[index]};
+		   console.log(obj);
+		   if (($scope.pics)[index + 1]) {obj.i2 = ($scope.pics)[index + 1];}
+		   if (($scope.pics)[index + 2]) {obj.i3 = ($scope.pics)[index + 2];}
+		   objects.push(obj);
+		};
+		$scope.items = objects;
 	});
-  	var items = [];
-  	var index = 0;
- 	var x = Math.ceil(pics.length / 3);
-	for (var i = 0; i < x; i++) {
-	   var index = i * 3;
-	   var obj = {
-	       i1: pics[index];
-	   }
-	   if (pics[index + 1]) {
-	        obj.i2 = pics[index + 1];
-	   }
-	   if (pics[index + 2]) {
-	        obj.i3 = pics[index + 2];
-	   }
-	   items.push(obj);
-	};
-	console.log(items); 
-	$scope.items = items;
-};
+  	
+	/*console.log($scope.items); */
+}

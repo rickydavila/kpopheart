@@ -189,16 +189,16 @@ ul.grid{
     list-style: none;
     /*width: 1100px;*/
     margin: 0 auto;
-    text-align: left;
-    padding: 20px;
+    /*text-align: left;*/
+    padding: 30px;
 }
 
 ul.grid li{
     padding: 20px;
-    float:left;
+    /*float:left;*/
 }
 
-ul.grid li img{
+ul.grid img{
     width:290px;
     height:280px;
     display:block;

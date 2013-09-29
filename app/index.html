@@ -34,23 +34,25 @@
     <div class="container-fluid" ng-controller="SwitchableGridController">
             <h1 class="animated pulse">kpop <i class="icon-heart heart"></i> heart</h1>
             <h2>most popular kpop pics on the web</h2>
-    <div ng-repeat="p in pics">
-        <span ng-switch on="$index % 3">
-            <span ng-switch when="0">
-                <div class="row">
-              <!-- We have two layouts. We choose which one to show depending on the "layout" binding -->
-                    <div class="span4" ngshow="pics[$index]">
-                          <a href="{{pics[$index].link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{pics[$index].images.low_resolution.url}}" class="fade"/></a>
-                    </div>
-                    <div class="span4" ngshow="pics[$index+1]">
-                          <a href="{{pics[$index+1].link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{pics[$index+1].images.low_resolution.url}}" class="fade"/></a>
-                    </div>
-                    <div class="span4" ngshow="pics[$index+2]">
-                          <a href="{{pics[$index+2].link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{pics[$index+2].images.low_resolution.url}}" class="fade"/></a>
-                    </div>
-                </div> <!--row-->
-            </span>
-        </span>
+    <div ng-repeat="p in items">
+        <div class="row">
+      <!-- We have two layouts. We choose which one to show depending on the "layout" binding -->
+            <div class="span4">
+                <ul class"grid">
+                  <a href="{{p.i1.link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{p.i1.images.low_resolution.url}}" class="fade"/></a>
+                </ul>
+            </div>
+            <div class="span4">
+                <ul class"grid">
+                  <a href="{{p.i2.link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{p.i2.images.low_resolution.url}}" class="fade"/></a>
+                </ul>
+            </div>
+            <div class="span4">
+                <ul class"grid">
+                  <a href="{{p.i3.link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{p.i3.images.low_resolution.url}}" class="fade"/></a>
+                </ul>
+            </div>
+        </div> <!--row-->
     </div>
     </div><!--.container-->
 
