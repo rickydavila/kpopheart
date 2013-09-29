@@ -8,12 +8,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/bootstrap.css">
         <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/animate.css">
+        <link href='http://fonts.googleapis.com/css?family=Raleway:700,300' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
         <!-- endbuild -->
 </head>
   <body ng-app="kpopApp">
@@ -27,7 +31,25 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div class="container-fluid" ng-controller="SwitchableGridController">
+            <h1 class="animated pulse">kpop <i class="icon-heart heart"></i> heart</h1>
+            <h2>most popular kpop pics on the web</h2>
+    <div ng-repeat="p in items">
+        <div class="row" style="float: none; margin: 0 auto;">
+      <!-- We have two layouts. We choose which one to show depending on the "layout" binding -->
+            <div class="span4 is-padded">
+                  <a href="{{p.i1.link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{p.i1.images.low_resolution.url}}" class="fade"/></a>
+            </div>
+             <div class="span4 is-padded">
+                  <a href="{{p.i2.link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{p.i2.images.low_resolution.url}}" class="fade"/></a>
+            </div>
+            <div class="span4 is-padded">
+                  <a href="{{p.i3.link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{p.i3.images.low_resolution.url}}" class="fade"/></a>
+            </div>
+        </div> <!--row-->
+    </div><!--ng-repeat-->
+    </div><!--.container-->
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -42,6 +64,7 @@
 
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+
 
         <!-- build:js scripts/plugins.js -->
         <script src="bower_components/bootstrap-sass/js/bootstrap-affix.js"></script>
@@ -62,6 +85,15 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-resource.min.js"></script>
+        <!-- <script type="text/javascript" src="http://code.angularjs.org/1.2.0rc1/angular-resource.min.js"></script>
+        <script type="text/javascript" src="http://code.angularjs.org/1.2.0rc1/angular-animate.js"></script> 
+        <script src="bower_components/angular/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular/angular-resource/angular-resource.js"></script> 
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>-->
+
+
         <!-- endbuild -->
 </body>
 </html>
