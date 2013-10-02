@@ -14,11 +14,11 @@
 
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/bootstrap.css">
-        <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.css">
         <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/main.scss">
         <link rel="stylesheet" href="styles/animate.css">
         <link href='http://fonts.googleapis.com/css?family=Raleway:700,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="styles/pictonic/css/pictonic.css">
+        <!--[if lt IE 8]><script src="../pictonic/js/pictonic.min.js"></script><![endif]-->
         <!-- endbuild -->
 </head>
   <body ng-app="kpopApp">
@@ -32,7 +32,7 @@
 
     <!-- Add your site or application content here -->
     <div class="container-fluid" ng-controller="SwitchableGridController">
-            <h1 class="animated pulse">kpop <i class="icon-heart heart"></i> heart</h1>
+            <h1 class="animated pulse">kpop<span class="icon-kub-like-02 heart"></span> heart</h1>
             <h2>most popular kpop pics on the web</h2>
     <div ng-repeat="p in items">
         <div class="row" style="float: none; margin: 0 auto;">
@@ -70,19 +70,18 @@
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-animate/angular-animate.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-affix.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-alert.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-dropdown.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-tooltip.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-modal.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-transition.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-button.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-popover.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-typeahead.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-carousel.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-scrollspy.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-collapse.js"></script>
-        <script src="bower_components/bootstrap-sass/js/bootstrap-tab.js"></script>
+        <script src="bower_components/bootstrap-sass/js/affix.js"></script>
+        <script src="bower_components/bootstrap-sass/js/alert.js"></script>
+        <script src="bower_components/bootstrap-sass/js/dropdown.js"></script>
+        <script src="bower_components/bootstrap-sass/js/tooltip.js"></script>
+        <script src="bower_components/bootstrap-sass/js/modal.js"></script>
+        <script src="bower_components/bootstrap-sass/js/transition.js"></script>
+        <script src="bower_components/bootstrap-sass/js/button.js"></script>
+        <script src="bower_components/bootstrap-sass/js/popover.js"></script>
+        <script src="bower_components/bootstrap-sass/js/carousel.js"></script>
+        <script src="bower_components/bootstrap-sass/js/scrollspy.js"></script>
+        <script src="bower_components/bootstrap-sass/js/collapse.js"></script>
+        <script src="bower_components/bootstrap-sass/js/tab.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->

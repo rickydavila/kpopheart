@@ -20,6 +20,7 @@ h1 {
     font-size: 70px;
     color: #595959;
     padding-top: 30px;
+    display: block;
 }
 
 h2 {
@@ -27,7 +28,6 @@ h2 {
 }
 .heart{
     color: #ef7e90;
-    font-family: 'FontAwesome';
     transition: color .5s ease;
 }
 .heart:hover {
