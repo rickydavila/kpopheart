@@ -8,23 +8,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="styles/a5c01db0.main.css">
+        <link rel="stylesheet" href="styles/aaaff82e.main.css">
 </head>
   <body ng-app="kpopApp">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!--[if lt IE 9]>
-      <script src="bower_components/es5-shim/es5-shim.js"></script>
-      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <!--[if lt IE 9]>   <script src="bower_components/es5-shim/es5-shim.js"></script>
+                        <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div class="container-fluid" ng-controller="SwitchableGridController">
+            <h1 class="animated pulse">kpop<span class="icon-kub-like-02 heart"></span> heart</h1>
+            <h2>most popular kpop pics on the web</h2>
+    <div ng-repeat="p in items">
+        <div class="row" style="float: none; margin: 0 auto">
+      <!-- We have two layouts. We choose which one to show depending on the "layout" binding -->
+            <div class="span4 is-padded">
+                  <a href="{{p.i1.link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{p.i1.images.low_resolution.url}}" class="fade"></a>
+            </div>
+             <div class="span4 is-padded">
+                  <a href="{{p.i2.link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{p.i2.images.low_resolution.url}}" class="fade"></a>
+            </div>
+            <div class="span4 is-padded">
+                  <a href="{{p.i3.link}}" target="_blank" class="animated fadeIn grid"><img ng-src="{{p.i3.images.low_resolution.url}}" class="fade"></a>
+            </div>
+        </div> <!--row-->
+    </div><!--ng-repeat-->
+    </div><!--.container-->
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -37,11 +55,11 @@
        ga('send', 'pageview');
     </script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
 
-        <script src="scripts/76c21dca.plugins.js"></script>
 
-        <script src="scripts/3688855f.scripts.js"></script>
+
+        <script src="scripts/fc10057e.plugins.js"></script>
+
+        <script src="scripts/1dea5757.scripts.js"></script>
 </body>
 </html>
